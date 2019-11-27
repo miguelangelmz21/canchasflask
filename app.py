@@ -25,9 +25,12 @@ from controllers.valoraciones import ValoracionController,ValoracionesController
 from flask_jwt import JWT
 from seguridad import autentication, identificador
  
+ from flask_cors import CORS
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']="mysql://root:root@localhost/canchas"
+CORS(app)
+# app.config['SQLALCHEMY_DATABASE_URI']="mysql://root:root@localhost/canchas"
+app.config['SQLALCHEMY_DATABASE_URI']="mysql://z3YWkuyTTF:AQZDC7JED7@remotemysql.com/z3YWkuyTTF"
 app.config['SECRET_KEY'] = 'clave_secreta'
 app.config['JWT_AUTH_URL_RULE']='/usuario/login'
 import datetime
