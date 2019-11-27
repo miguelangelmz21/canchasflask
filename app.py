@@ -25,7 +25,7 @@ from controllers.valoraciones import ValoracionController,ValoracionesController
 from flask_jwt import JWT
 from seguridad import autentication, identificador
  
- from flask_cors import CORS
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
